@@ -11,3 +11,27 @@ The decision tree regressor's best training error was 9.6439512462, and its best
 The random forest with 20 estimators and no maximum depth produced a training error of 2.05575402542, a testing error of 13.0226768092, and predicted 24.25.
 The gradient-boosting regressor with 140 estimators and a maximum depth of 20 had a training error equal to 0.0325657890507 and a testing error equal to 8.68958674752. It predicted 24.82231953, or $24,822.32.
 
+
+
+
+Linear regression is the highest-bias model.
+The random forest is more biased than the decision tree, but its variance's improvement is 
+
+
+high variance curve:
+training error could be good
+test error decreases as m increases.
+large gap between training and test error
+
+high bias curve:
+training error and test error are high
+small gap between training and test error
+
+
+
+
+
+
+
+
+The neural networks suffer from high variance.
