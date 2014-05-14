@@ -42,7 +42,6 @@ print "Training Error = " + str(train_err)
 test_err = mean_squared_error(y_test, regressor.predict(X_test))
 print "Testing Error = " + str(test_err)
 
-
 print '\nAdaBoost +++++++++++++++++++++++++++++++++++++++'
 from sklearn.ensemble import AdaBoostRegressor
 
@@ -54,9 +53,9 @@ train_err = mean_squared_error(y_train, regressor.predict(X_train))
 print "Training Error = " + str(train_err)
 test_err = mean_squared_error(y_test, regressor.predict(X_test))
 print "Testing Error = " + str(test_err)
-
-y = regressor.predict(x)
-print "Prediction for " + str(x) + " = " + str(y)
+#
+# y = regressor.predict(x)
+# print "Prediction for " + str(x) + " = " + str(y)
 
 
 print '\nkNN +++++++++++++++++++++++++++++++++++++++'
@@ -71,3 +70,34 @@ print "Testing Error = " + str(test_err)
 
 y = regressor.predict(x)
 print "Prediction for " + str(x) + " = " + str(y)
+
+
+
+print '\nSVM +++++++++++++++++++++++++++++++++++++++'
+from sklearn.svm import SVR
+regressor = SVR()
+regressor.fit(X_train, y_train)
+
+train_err = mean_squared_error(y_train, regressor.predict(X_train))
+print "Training Error = " + str(train_err)
+test_err = mean_squared_error(y_test, regressor.predict(X_test))
+print "Testing Error = " + str(test_err)
+
+y = regressor.predict(x)
+print "Prediction for " + str(x) + " = " + str(y)
+
+
+print '\nLinear Regression +++++++++++++++++++++++++++++++++++++++'
+from sklearn.linear_model import SGDRegressor
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+
+train_err = mean_squared_error(y_train, regressor.predict(X_train))
+print "Training Error = " + str(train_err)
+test_err = mean_squared_error(y_test, regressor.predict(X_test))
+print "Testing Error = " + str(test_err)
+
+y = regressor.predict(x)
+print "Prediction for " + str(x) + " = " + str(y)
+
